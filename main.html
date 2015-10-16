@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="h3">{{ greeting }}</div>
+    
+  <!-- Input to add new task -->
+  <div class="input-group">
+    <input class="form-control" type="text" [(ng-model)]="newTask" />
+    <span class="input-group-addon" (click)="addTask()">Add</span>
+  </div>
+  
+  <!-- List of tasks -->
+  <div class="todo-item" *ng-for="#task of tasks; #index = index">
+    <input class="todo-checkbox" type="checkbox" [(ng-model)]="task.complete">
+    <span class="todo-text" [ng-class]="{ complete: task.complete }">{{ task.text }}</span>
+    <i class="glyphicon glyphicon-remove" (click)="removeTask(index)"></i>
+  </div>
+  
+</div>
