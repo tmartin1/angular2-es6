@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap@3.3.5" data-semver="3.3.5" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://jspm.io/system@0.18.17.js"></script>
+    <script src="https://code.angularjs.org/2.0.0-alpha.42/angular2.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
+  </head>
+
+  <body>
+    <app></app>
+    <script>
+      System.config({
+        paths: {
+          'app.js':'app.js' 
+        }   
+      });
+      System.import('app.js');
+    </script>
+  </body>
+
+</html>
