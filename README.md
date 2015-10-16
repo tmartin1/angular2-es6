@@ -1,9 +1,11 @@
 ##ES6 and Angular 2
 
 **Summary**
+
 Walk through building a to-do application with Angular 2 and ES6
 
 **Contents**
+
 [1. The Most Basic Implementation](#1-the-most-basic-implementation)
 
 * No folder structure, all in index.html, main.html and app.js.
@@ -27,6 +29,7 @@ Walk through building a to-do application with Angular 2 and ES6
 * Add directive for something.
 * Freeze plunker here and copy to new plunker before continuing.
 
+<hr>
 
 1. The Most Basic Implementation
 ==
