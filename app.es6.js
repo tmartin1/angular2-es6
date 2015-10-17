@@ -1,8 +1,7 @@
 import {Component, View, Control, bootstrap, CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/angular2';
 
 @Component({
-  selector: 'app',
-  providers: [Service]
+  selector: 'app'
 })
 
 @View({
@@ -11,11 +10,11 @@ import {Component, View, Control, bootstrap, CORE_DIRECTIVES, FORM_DIRECTIVES} f
 })
 
 class App {
-  constructor(service: Service) {
-    this.greeting = service.greeting();
-    setTimeout(() => this.greeting = 'To Do List - ' + moment().format('LL'), 2000);
-    
+  constructor() {
+    this.greeting = 'Welcome!';
     this.tasks = this.defaultTasks();
+    setTimeout(() =>
+      this.greeting = 'To Do List (v1) - ' + moment().format('LL'), 2000);
   }
   
   addTask() {
@@ -36,16 +35,6 @@ class App {
     ];
   }
   
-}
-
-class Service {
-  constructor() {
-    this.title = 'Welcome';
-  }
-  
-  greeting() {
-    return this.title;
-  }
 }
 
 bootstrap(App);
