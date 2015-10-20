@@ -8,7 +8,7 @@
   </div>
   
   <!-- List of tasks -->
-  <div class="todo-item" *ng-for="#task of tasks; #index = index">
+  <div class="todo-item" *ng-for="#task of tasks; #index = index" (click)="toggleTask(task)">
     <input class="todo-checkbox" type="checkbox" [(ng-model)]="task.complete">
     <span class="todo-text" [ng-class]="{ complete: task.complete }">{{ task.text }}</span>
     <i class="glyphicon glyphicon-remove" (click)="removeTask(index)"></i>
